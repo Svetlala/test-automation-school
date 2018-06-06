@@ -10,6 +10,11 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.testng.Assert.assertEquals;
+
 
 public class LocatorsTest {
     /*
@@ -56,14 +61,17 @@ public class LocatorsTest {
     @Test
     public void locateElementByClassNameTest() throws Exception {
         //TODO 2 - locate *all* (also that are not visible on the screen) products by class name and put them into ArrayList Collection and check that elements list size is 14
-
+        List<WebElement> productsList = driver.findElements(By.className("product-container"));
+        assertEquals(productsList.size(), 14);
         //TODO 2
     }
 
 
     @Test
     public void locateElementByTagNameTest() throws Exception {
-        //TODO 3 - locate all images by tag name and put them into ArrayList Collection. Then check that first element in Collection is displayed
+        //TODO 3 - locate all images by tag name and put them into ArrayList Collection
+        ArrayList<WebElement> imageList = (ArrayList<WebElement>) driver.findElements(By.cssSelector("[class='product-image-container']"));
+        assertEquals(imageList.size(), 14);
 
         //TODO 3
     }
