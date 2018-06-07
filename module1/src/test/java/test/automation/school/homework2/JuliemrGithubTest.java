@@ -33,7 +33,7 @@ public class JuliemrGithubTest {
 
     @Test
     public void testOpenJuliemr() {
-         
+
         Assert.assertEquals(driver.getTitle(), "Super Calculator");
     }
 
@@ -52,7 +52,7 @@ public class JuliemrGithubTest {
             e.printStackTrace();
         }
 
-        WebElement sum = driver.findElement(By.cssSelector(".ng-binding"));
+        WebElement sum = driver.findElement(By.cssSelector("h2"));
         Assert.assertEquals(sum.getText(), "57");
 
     }
