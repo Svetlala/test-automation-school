@@ -81,6 +81,7 @@ public class LocatorsTest {
     public void locateElementByNameTest() throws Exception {
         //TODO 4 - locate newsletter subscription input element by name. Then check that element is displayed
 
+
         //TODO 4
     }
 
@@ -98,6 +99,8 @@ public class LocatorsTest {
     public void locateElementByCssSelctorTest() throws Exception {
         //TODO 6 - locate only *visible* products element by CSS and put them into ArrayList Collection and check that elements list size is 7
 
+
+        //driver.findElements(By.ByXPath(//*[contains(@class,'active')]/*[contains(@class,'ajax_block_product')]));
         //TODO 6
 
     }

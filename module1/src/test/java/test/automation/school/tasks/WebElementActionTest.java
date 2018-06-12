@@ -57,9 +57,10 @@ public class WebElementActionTest {
 
     public void testInputText() {
         WebElement inptSearch = driver.findElement(By.id("search_query_top"));
-        inptSearch.sendKeys("shirt");
+        String inputText = "shirt";
+        inptSearch.sendKeys(inputText);
         System.out.println(inptSearch.getAttribute("value"));
-        Assert.assertEquals(inptSearch.getAttribute("value"), "shirt");
+        Assert.assertEquals(inptSearch.getAttribute("value"), inputText);
 
         inptSearch.clear();
         inptSearch.sendKeys("summer");
